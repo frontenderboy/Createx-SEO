@@ -1,8 +1,14 @@
 html {
     scroll-behavior: smooth;
     font-size: 10px;
+    height: 100%;
 }
 
 body {
     font-family: 'Lato', sans-serif;
+}
+
+.container {
+    max-width: 1230px;
+    margin: 0 auto;
 }
