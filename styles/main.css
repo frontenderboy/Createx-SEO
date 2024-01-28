@@ -432,7 +432,7 @@ ul {
   box-sizing: border-box;
 }
 
-.navbar__item a, .content-btn, .redirect-btn, .header-wrapper__button {
+.link, .navbar__item a, .content-btn-try, .content-btn-more, .content-btn, .redirect-btn, .header-wrapper__button {
   transition: all 0.3s ease;
 }
 
@@ -521,6 +521,46 @@ body {
   letter-spacing: 0.5px;
 }
 .content-btn:hover {
+  background: #554fee;
+}
+
+.content-buttons {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.content-btn-more {
+  padding: 0 32px;
+  border-radius: 4px;
+  border: 1px solid #7772F1;
+  color: #7772F1;
+  text-align: center;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: 0.5px;
+}
+.content-btn-more:hover {
+  color: #ffffff;
+  background: #7772F1;
+}
+
+.content-btn-try {
+  padding: 0 32px;
+  border-radius: 4px;
+  border: 1px solid #7772F1;
+  background: #7772F1;
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: 0.5px;
+}
+.content-btn-try:hover {
   background: #554fee;
 }
 
@@ -795,4 +835,115 @@ body {
 
 .short-abous-us-img {
   border-radius: 4px;
+}
+
+.short-our-services {
+  padding-bottom: 83px;
+}
+
+.short-our-services-title {
+  color: #1E212C;
+  text-align: center;
+  font-size: 4.6rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 130%;
+  margin-bottom: 40px;
+}
+
+.tabs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.link {
+  width: 246px;
+  padding: 10px 0;
+  color: #9A9CA5;
+  text-align: center;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.link:hover {
+  color: #1E212C;
+}
+
+.active-tab {
+  background: transparent;
+  border-radius: 4px;
+  border: 1px solid #7772F1;
+  color: #7772F1;
+  text-align: center;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
+}
+.active-tab:hover {
+  color: #7772F1;
+}
+
+.tab-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tab-content-info {
+  max-width: 390px;
+}
+
+.content-info-title {
+  color: #1E212C;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  margin-bottom: 24px;
+}
+
+.content-info-text {
+  color: #787A80;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  margin-bottom: 48px;
+}
+
+.info-list__item {
+  display: flex;
+  align-items: center;
+  color: #424551;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  margin-bottom: 12px;
+}
+.info-list__item:last-child {
+  margin-bottom: 48px;
+}
+.info-list__item:before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url("../../images/short-about-us/mark-list.svg");
+  background-repeat: no-repeat;
+  margin-right: 12px;
+}
+
+.content-img {
+  width: 700px;
+}
+
+.hidden {
+  display: none;
 }/*# sourceMappingURL=main.css.map */

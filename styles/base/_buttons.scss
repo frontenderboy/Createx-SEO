@@ -82,3 +82,49 @@
         background: $color-hover-background;
     }
 }
+
+.content-buttons {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.content-btn-more {
+    padding: 0 32px;
+    border-radius: 4px;
+    border: 1px solid $color-purple;
+    @extend %transition;
+
+    color: $color-purple;
+    text-align: center;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 44px; 
+    letter-spacing: 0.5px;
+
+    &:hover {
+        color: $color-white;
+        background: $color-purple;
+    }
+}
+
+.content-btn-try {
+    padding: 0 32px;
+    border-radius: 4px;
+    border: 1px solid $color-purple;
+    background: $color-purple;
+    @extend %transition;
+
+    color: $color-white;
+    text-align: center;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 0.5px;
+
+    &:hover {
+        background: $color-hover-background;
+    }
+}       
