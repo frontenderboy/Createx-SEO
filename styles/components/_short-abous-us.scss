@@ -1,0 +1,59 @@
+.short-abous-us {
+    padding: 120px 0 40px;
+}
+
+.short-abous-us-inner {
+    display: flex;
+    gap: 105px;
+    margin-bottom: 180px;
+}
+
+.short-about-us__title {
+    max-width: 630px;
+    color: $color-dark;
+    font-size: 2.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+.certificates-box {
+    display: grid;
+    grid-template-columns: repeat(2, 227px);
+    gap: 40px;
+}
+
+.certificate__item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.certificate__name {
+    color: $color-gray;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.companies__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.company__link {
+    position: relative;
+
+    & img:last-child {
+        position: absolute;
+        left: 0;
+        opacity: 0;
+        transition: all .3s ease;
+    }
+
+    &:hover img:last-child{
+        opacity: 1;
+    }
+}
