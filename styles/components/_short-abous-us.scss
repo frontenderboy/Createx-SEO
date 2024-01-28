@@ -1,8 +1,8 @@
 .short-abous-us {
-    padding: 120px 0 40px;
+    padding: 120px 0 180px;
 }
 
-.short-abous-us-inner {
+.certificate-inner {
     display: flex;
     gap: 105px;
     margin-bottom: 180px;
@@ -41,6 +41,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 170px;
 }
 
 .company__link {
@@ -56,4 +57,40 @@
     &:hover img:last-child{
         opacity: 1;
     }
+}
+
+.short-about-us-inner {
+    background: url('../../images/short-about-us/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1000px;
+}
+
+.short-abous-us-box {
+    display: flex;
+    align-items: center;
+    gap: 135px;
+    margin-bottom: 180px;
+}
+
+.content-title {
+    color: $color-dark;
+    font-size: 4.6rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 130%;
+}
+
+.content-text {
+    color: $color-text;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; 
+
+    margin: 40px 0 48px;
+}
+
+.short-abous-us-img {
+    border-radius: 4px;
 }
