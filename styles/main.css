@@ -307,6 +307,10 @@ input[type=submit] {
   cursor: pointer; /* 3 */
 }
 
+input[type=button] {
+  border: none;
+}
+
 /**
  * Re-set default cursor for disabled elements.
  */
@@ -432,7 +436,7 @@ ul {
   box-sizing: border-box;
 }
 
-.link, .navbar__item a, .content-btn-try, .content-btn-more, .content-btn, .redirect-btn, .header-wrapper__button {
+.link, .navbar__item a, .regular__btn-outline, .regular__btn, .large__btn-outline, .large__btn {
   transition: all 0.3s ease;
 }
 
@@ -451,7 +455,8 @@ body {
   margin: 0 auto;
 }
 
-.header-wrapper__button {
+.large__btn {
+  display: inline-block;
   border-radius: 4px;
   background: #7772F1;
   padding: 0 40px;
@@ -463,11 +468,11 @@ body {
   line-height: 52px;
   letter-spacing: 0.5px;
 }
-.header-wrapper__button:hover {
+.large__btn:hover {
   background: #554fee;
 }
 
-.redirect-btn {
+.large__btn-outline {
   display: inline-block;
   padding: 0 40px;
   background: transparent;
@@ -482,18 +487,52 @@ body {
   line-height: 52px;
   letter-spacing: 0.5px;
 }
-.redirect-btn:hover {
+.large__btn-outline:hover {
   background: #ffffff;
   color: #000000;
 }
 
-.play-btn {
+.regular__btn {
+  display: inline-block;
+  padding: 0 32px;
+  border-radius: 4px;
+  background: #7772F1;
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: 0.5px;
+}
+.regular__btn:hover {
+  background: #554fee;
+}
+
+.regular__btn-outline {
+  padding: 0 32px;
+  border-radius: 4px;
+  border: 1px solid #7772F1;
+  color: #7772F1;
+  text-align: center;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: 0.5px;
+}
+.regular__btn-outline:hover {
+  color: #ffffff;
+  background: #7772F1;
+}
+
+.play__btn-small {
   position: relative;
   border: none;
   background: transparent;
   padding: 0;
 }
-.play-btn:hover::before {
+.play__btn-small:hover::before {
   content: "";
   display: block;
   position: absolute;
@@ -507,61 +546,10 @@ body {
   opacity: 0.12;
 }
 
-.content-btn {
-  display: inline-block;
-  padding: 0 32px;
-  border-radius: 4px;
-  background: #7772F1;
-  color: #ffffff;
-  text-align: center;
-  font-size: 1.4rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 44px;
-  letter-spacing: 0.5px;
-}
-.content-btn:hover {
-  background: #554fee;
-}
-
-.content-buttons {
+.buttons__wrapper {
   display: flex;
   align-items: center;
   gap: 24px;
-}
-
-.content-btn-more {
-  padding: 0 32px;
-  border-radius: 4px;
-  border: 1px solid #7772F1;
-  color: #7772F1;
-  text-align: center;
-  font-size: 1.4rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 44px;
-  letter-spacing: 0.5px;
-}
-.content-btn-more:hover {
-  color: #ffffff;
-  background: #7772F1;
-}
-
-.content-btn-try {
-  padding: 0 32px;
-  border-radius: 4px;
-  border: 1px solid #7772F1;
-  background: #7772F1;
-  color: #ffffff;
-  text-align: center;
-  font-size: 1.4rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 44px;
-  letter-spacing: 0.5px;
-}
-.content-btn-try:hover {
-  background: #554fee;
 }
 
 .abous-us__progress-box {
@@ -946,4 +934,140 @@ body {
 
 .hidden {
   display: none;
+}
+
+.get-analysis {
+  background: url("../../images/get-analysis/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  padding: 80px 0;
+}
+
+.get-analysis-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.analysis-title {
+  color: #ffffff;
+  font-size: 4.6rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 130%;
+  margin-bottom: 40px;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 285px);
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.get-analysis-input {
+  padding: 13px 13px 16px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.12);
+  margin-top: 8px;
+  outline: none;
+  transition: background 0.4s ease-in-out;
+}
+.get-analysis-input::-moz-placeholder {
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  opacity: 0.6;
+}
+.get-analysis-input::placeholder {
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  opacity: 0.6;
+}
+.get-analysis-input:focus {
+  background: #ffffff;
+  color: #1E212C;
+}
+.get-analysis-input:focus::-moz-placeholder {
+  color: #1E212C;
+}
+.get-analysis-input:focus::placeholder {
+  color: #1E212C;
+}
+
+.get-analysis-label {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+}
+.get-analysis-label:last-child {
+  grid-column: 1/3;
+}
+
+.custom-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.custom-checkbox + label::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  margin-right: 12px;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+  margin-top: -23px;
+}
+
+.custom-checkbox:checked + label::before {
+  border-color: #7772F1;
+  background-color: #7772F1;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+.custom-checkbox:not(:disabled):not(:checked) + label:hover::before {
+  border-color: #ffffff;
+}
+
+.custom-checkbox:not(:disabled):active + label::before {
+  background-color: #8b88e9;
+  border-color: #ffffff;
+}
+
+.custom-checkbox:focus:not(:checked) + label::before {
+  border-color: #ffffff;
+}
+
+.analysis-form-get {
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
 }/*# sourceMappingURL=main.css.map */
