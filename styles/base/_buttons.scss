@@ -1,4 +1,4 @@
-.large__btn {
+.large__btn-solid {
     display: inline-block;
     border-radius: 4px;
     background: $color-purple;
@@ -41,7 +41,7 @@
     }
 }
 
-.regular__btn {
+.regular__btn-solid {
     display: inline-block;
     padding: 0 32px;
     border-radius: 4px;
@@ -106,4 +106,26 @@
     display: flex;
     align-items: center;
     gap: 24px;
+}
+
+.special__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    &:hover {
+        &::after {
+            transform: translateX(10px);
+        }
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        width: 16px;
+        height: 16px;
+        background: url('../../images/arrow-right.svg');
+        transition: all .5s ease;
+    }
+
 }

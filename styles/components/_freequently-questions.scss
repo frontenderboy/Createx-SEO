@@ -1,0 +1,21 @@
+.freequently-questions {
+    background: url('../../images/freequently-questions/background.png');
+    background-repeat: no-repeat;
+    height: 806px;
+
+    padding: 120px 0 180px;
+}
+
+.freequently-questions-wrapper {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+}
+
+.questions-wrapper-title {
+    color: $color-dark;
+    font-size: 4.6rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 130%;
+}
