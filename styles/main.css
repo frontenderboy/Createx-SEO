@@ -1197,6 +1197,10 @@ body {
   justify-content: space-between;
 }
 
+.questions-wrapper-info {
+  height: 500px;
+}
+
 .questions-wrapper-title {
   color: #1E212C;
   font-size: 4.6rem;
