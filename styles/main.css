@@ -1270,6 +1270,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 60px;
 }
 
 .item__inner {
@@ -1305,6 +1306,10 @@ body {
   left: 0;
   z-index: 2;
   transition: all 0.3s ease;
+}
+.case-studies__item:hover {
+  box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.05), 0px 12px 10px -6px rgba(30, 33, 44, 0.08), 0px 26px 24px -10px rgba(30, 33, 44, 0.1), 0px 60px 80px -20px rgba(30, 33, 44, 0.16);
+  border: none;
 }
 .case-studies__item:hover::before {
   background-color: rgb(30, 33, 44);
@@ -1409,4 +1414,17 @@ body {
   font-weight: 400;
   line-height: 150%;
   transition: all 0.3s ease;
+}
+
+.clients-case-footer {
+  text-align: center;
+}
+
+.case-footer__title {
+  color: #1E212C;
+  font-size: 2.8rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  margin-right: 40px;
 }/*# sourceMappingURL=main.css.map */
