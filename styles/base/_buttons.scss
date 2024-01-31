@@ -127,5 +127,27 @@
         background: url('../../images/arrow-right.svg');
         transition: all .5s ease;
     }
+}
 
+.control__btn {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    @extend %transition;
+
+    & svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &:hover svg path {
+        fill: $color-white;
+    }
+
+    &:hover {
+        background-color: $color-purple;
+    }
 }

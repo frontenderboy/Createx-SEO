@@ -1,3 +1,10 @@
 %transition {
     transition: all .3s ease;
 }
+
+%feature-progress-icon {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+}

@@ -277,6 +277,9 @@ textarea {
  */
 button {
   overflow: visible;
+  background: transparent;
+  border: none;
+  padding: 0px;
 }
 
 /**
@@ -436,8 +439,23 @@ ul {
   box-sizing: border-box;
 }
 
-.link, .navbar__item a, .regular__btn-outline, .regular__btn-solid, .large__btn-outline, .large__btn-solid {
+.link, .navbar__item a, .control__btn, .regular__btn-outline, .regular__btn-solid, .large__btn-outline, .large__btn-solid {
   transition: all 0.3s ease;
+}
+
+.circle-red::before, .circle-blue-all::before, .circle-green-all::before, .circle-yellow::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+::-moz-selection {
+  background-color: #dcdbf7;
+}
+
+::selection {
+  background-color: #dcdbf7;
 }
 
 html {
@@ -567,6 +585,25 @@ body {
   height: 16px;
   background: url("../../images/arrow-right.svg");
   transition: all 0.5s ease;
+}
+
+.control__btn {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+}
+.control__btn svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.control__btn:hover svg path {
+  fill: #ffffff;
+}
+.control__btn:hover {
+  background-color: #7772F1;
 }
 
 .abous-us__progress-box {
@@ -1207,4 +1244,169 @@ body {
   font-style: normal;
   font-weight: 900;
   line-height: 130%;
+}
+
+.clients-case {
+  background: #F4F5F6;
+  padding: 80px 0 85px;
+}
+
+.clients-case-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.clients-case__title {
+  color: #1E212C;
+  font-size: 4.6rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 130%;
+}
+
+.case-studies__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.item__inner {
+  position: relative;
+  z-index: 3;
+}
+
+.case-studies__item {
+  display: block;
+  width: 390px;
+  height: 390px;
+  position: relative;
+  z-index: 1;
+  padding: 40px;
+  border-radius: 4px;
+  border: 1px solid #E5E8ED;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.case-studies__item::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  background-color: #ffffff;
+  will-change: background-color;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+.case-studies__item:hover::before {
+  background-color: rgb(30, 33, 44);
+  opacity: 0.6;
+}
+.case-studies__item:hover .studies__item-logo {
+  filter: brightness(0) invert(1);
+}
+.case-studies__item:hover .studies__item-title {
+  color: #ffffff;
+}
+.case-studies__item:hover .studies__item-text {
+  color: #ffffff;
+}
+.case-studies__item:hover .statistics-info__percent {
+  color: #ffffff;
+}
+.case-studies__item:hover .statistics-info__name {
+  color: #ffffff;
+}
+
+.studies__item-logo {
+  width: 80px;
+  height: 44px;
+  margin-bottom: 8px;
+  transition: filter 0.3s ease;
+}
+
+.studies__item-title {
+  color: #1E212C;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  transition: all 0.3s ease;
+}
+.studies__item-title::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, rgba(218, 219, 221, 0) 0%, rgba(218, 219, 221, 0.5) 12.33%, #DADBDD 51.91%, rgba(218, 219, 221, 0.5) 87.85%, rgba(218, 219, 221, 0) 100%);
+  margin: 20px 0;
+}
+
+.studies__item-text {
+  color: #787A80;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  margin-bottom: 70px;
+  transition: all 0.3s ease;
+}
+
+.studies__item-inner {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.circle-yellow::before {
+  background: url("../../images/clients-case/features-icons/circle-yellow.svg");
+}
+
+.circle-green-all::before {
+  background: url("../../images/clients-case/features-icons/circle-green-all.svg");
+}
+
+.circle-blue-all::before {
+  background: url("../../images/clients-case/features-icons/circle-blue-all.svg");
+}
+
+.circle-red::before {
+  background: url("../../images/clients-case/features-icons/circle-red.svg");
+}
+
+.feature__item-statistics {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.feature-statistics-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.statistics-info__percent {
+  color: #1E212C;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  transition: all 0.3s ease;
+}
+
+.statistics-info__name {
+  color: #1E212C;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  transition: all 0.3s ease;
 }/*# sourceMappingURL=main.css.map */
