@@ -46,3 +46,23 @@ titles.forEach(item => item.addEventListener('click', () => {
 document.querySelector('[data-tab-accordion="tabAccordion-1"]').classList.add('active');
 document.querySelector('#tabAccordion-1').classList.add('active');
 document.querySelector('#tabAccordion-1').style.maxHeight = document.querySelector('#tabAccordion-1').scrollHeight + 'px';
+
+
+const switchBtn = document.querySelector('.switch-btn')
+const planWrapper = document.querySelector('.plan-wrapper');
+const planNumbers = document.querySelectorAll('.plan__item .price-number');
+
+switchBtn.addEventListener('click', () => {
+    switchBtn.classList.toggle('switch-on')
+
+    planNumbers.forEach(planNumber => {
+        const monthlyPrice = parseFloat(planNumber.getAttribute('data-monthly-price'))
+        const yearlyPrice = parseFloat(planNumber.getAttribute('data-yearly-price'))
+
+        if(switchBtn.classList.contains('switch-on')) {
+            planNumber.innerHTML = yearlyPrice
+        } else {
+            planNumber.innerHTML = monthlyPrice
+        }
+    })
+})

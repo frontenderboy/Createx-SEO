@@ -1,0 +1,8 @@
+@mixin benefit-item-icon($background) {
+    content: "";
+    width: 40px;
+    display: block;
+    height: 40px;
+    background: $background;
+    margin-bottom: 16px;
+}

@@ -2,6 +2,7 @@
 
 // Abstract
 @import "abstract/constants";
+@import "abstract/mixins";
 @import "abstract/placeholders";
 
 // Base
@@ -18,3 +19,4 @@
 @import "components/get-analysis";
 @import "components/freequently-questions";
 @import "components/clients-case";
+@import "components/our-benefits";
